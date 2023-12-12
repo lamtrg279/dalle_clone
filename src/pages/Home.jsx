@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { Loader, Card, FormField } from "../components";
 
 const RenderCards = ({ data, title }) => {
   if (data?.length > 0)
     return data.map((post) => {
-      <Cards key={post._id} {...post} />;
+      <Card key={post._id} {...post} />;
     });
 
   return (
@@ -18,7 +19,7 @@ const Home = () => {
   const [searchText, setSearchText] = useState("");
 
   return (
-    <section className='max-w-71 mx-auto'>
+    <section className='max-w-7xl mx-auto'>
       <div>
         <h1 className='font-extrabold text-[#222328] text-[32px]'>
           The Community Showcase
